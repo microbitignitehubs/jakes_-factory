@@ -1,0 +1,18 @@
+let item = neopixel.create(DigitalPin.P0, 8, NeoPixelMode.RGB)
+item.showRainbow(1, 360)
+basic.forever(function () {
+    music.ringTone(262)
+    basic.pause(200)
+    music.ringTone(330)
+    basic.pause(200)
+    music.ringTone(392)
+    basic.pause(200)
+    music.ringTone(330)
+    basic.pause(300)
+    music.rest(music.beat(BeatFraction.Half))
+})
+basic.forever(function () {
+    item.show()
+    item.rotate(1)
+    basic.pause(100)
+})
